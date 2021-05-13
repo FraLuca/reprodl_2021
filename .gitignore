@@ -2,3 +2,5 @@ data/*
 lightning_logs/*
 .ipynb_checkpoints/*
 Initial Notebook.ipynb
+custom_dir/*
+outputs/*
