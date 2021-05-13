@@ -27,7 +27,8 @@ import hydra
 from omegaconf import DictConfig, OmegaConf
 
 
-
+import logging
+logger = logging.getLogger(__name__)
 
 
 
@@ -140,6 +141,7 @@ class AudioNet(pl.LightningModule):
 @hydra.main(config_path='configs', config_name='default')
 def train(cfg: DictConfig):
 
+    logger.info(OmegaConf.to_yaml(cfg))
 
     # We recover the original path of the dataset:
     path = Path(hydra.utils.get_original_cwd()) / Path(cfg.data.path)

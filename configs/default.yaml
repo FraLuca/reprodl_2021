@@ -19,3 +19,7 @@ trainer:
     # All parameters to be passed at the Trainer object
     gpus : 0
     max_epochs : 25
+    
+defaults:
+  - hydra/job_logging: colorlog
+  - hydra/hydra_logging: colorlog
